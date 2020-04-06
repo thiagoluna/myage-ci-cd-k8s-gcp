@@ -17,7 +17,7 @@ spec:
         tier: webserver
     spec:
       containers:
-      - image: gcr.io/myage-ci-cd-k8s/myage@sha256:8844c5d42a45569a2526e27dcae3c09c512e4ae2dc687b627fbbf0bb5b67c08e
+      - image: gcr.io/myage-ci-cd-k8s/myage@sha256:dc8b378f30325841085b65c78fe3943c3b058adacdde27c89ad2910a3e2e420c
         name: nginx-php
         ports:
         - containerPort: 80
