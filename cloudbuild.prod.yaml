@@ -1,0 +1,14 @@
+steps:
+  - id: Building image
+    
+    #Builder do proprio google rodar o Docker dentro do seu processo de CI
+    name: gcr.io/cloud-builders/docker
+    
+    #gerar uma imagem docker
+    args: ['build','-t','gcr.io/$PROJECT_ID/myage:$SHORT_SHA','-f','Dockerfile','.']
+
+  - id: Pushing Image
+    
+    #Dar push na imagem
+    name: gcr.io/cloud-builders/docker
+    args: ['push','gcr.io/$PROJECT_ID/myage:$SHORT_SHA']
